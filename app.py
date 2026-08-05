@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import joblib   
 
 nltk.download('stopwords')
-# Load dataset
+
 df = pd.read_csv(
     "dataset/spam.csv",
     sep="\t",
@@ -64,9 +64,7 @@ print("\nCleaned Message:\n")
 print(df.loc[2, "clean_message"])
 
 
-# ==========================================
 # STEP 4 - TF-IDF Vectorization
-# ==========================================
 
 # Convert text into numbers
 
@@ -82,9 +80,9 @@ print(X.shape)
 print("\nLabels:")
 print(y.head())
 
-# ==========================================
+
 # STEP 5 - Train Test Split
-# ==========================================
+
 
 X_train, X_test, y_train, y_test = train_test_split(
     X,
@@ -99,9 +97,8 @@ print(X_train.shape)
 print("\nTesting Data Shape:")
 print(X_test.shape)
 
-# ==========================================
+
 # STEP 6 - Train Model
-# ==========================================
 
 model = MultinomialNB()
 
@@ -109,9 +106,9 @@ model.fit(X_train, y_train)
 
 print("\nModel Trained Successfully!")
 
-# ==========================================
+
 # STEP 7 - Model Evaluation
-# ==========================================
+
 
 y_pred = model.predict(X_test)
 
@@ -126,18 +123,18 @@ print(confusion_matrix(y_test, y_pred))
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
 
-# ==========================================
+
 # STEP 8 - Save Model
-# ==========================================
+
 
 joblib.dump(model, "model/spam_model.pkl")
 joblib.dump(tfidf, "model/tfidf_vectorizer.pkl")
 
 print("\nModel Saved Successfully!")
 
-# ==========================================
+
 # STEP 9 - Predict New Message
-# ==========================================
+
 
 def predict_spam(message):
 
