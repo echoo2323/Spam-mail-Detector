@@ -1,6 +1,6 @@
 # 📧 Spam Mail Detector
 
-A Machine Learning project that classifies SMS messages as **Spam** or **Ham (Not Spam)** using Natural Language Processing (NLP) and the Multinomial Naive Bayes algorithm.
+A Machine Learning project that classifies mail as **Spam** or **Ham (Not Spam)** using Natural Language Processing (NLP) and the Multinomial Naive Bayes algorithm.
 
 ---
 
