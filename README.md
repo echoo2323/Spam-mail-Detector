@@ -6,7 +6,7 @@ A Machine Learning project that classifies SMS messages as **Spam** or **Ham (No
 
 ## 📌 Project Overview
 
-The Spam Mail Detector analyzes SMS messages and predicts whether they are spam or legitimate (ham). The project uses text preprocessing, TF-IDF vectorization, and a Machine Learning model to achieve accurate classification.
+The Spam Mail Detector analyzes mail and predicts whether they are spam or legitimate (ham). The project uses text preprocessing, TF-IDF vectorization, and a Machine Learning model to achieve accurate classification.
 
 ---
 
